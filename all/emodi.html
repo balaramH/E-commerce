@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>E-comm</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200;1,300&display=swap"
+        rel="stylesheet">
+        
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+            margin: 5px;
+            padding: 2px;
+        }
+
+        .navbar {
+            display: flex;
+            flex-flow: row;
+            position: sticky;
+            align-items: center;
+            top: 0px;
+            z-index: 1;
+            font-size: large;
+
+        }
+
+        #navbar {
+            /* overflow: hidden; */
+            background-color: rgb(99, 92, 92);
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+
+        #navbarSupportedContent {
+            float: right;
+        }
+
+        #ff,
+        #ff2,
+        #ff3 {
+            font-family: 'Shalimar', cursive;
+            /* font-family: 'Source Code Pro', monospace; */
+        }
+
+        body {
+            background-color: rgba(202, 212, 212, 0.8);
+            font-family: 'Praise', cursive;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#">E-ComeWorld</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                </li> -->
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Our Services
+                    </a>
+                    <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown ">
+                        <a class="dropdown-item" href="#">Amazon</a>
+                        <a class="dropdown-item" href="#">Flipcart</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Paytm</a>
+                        <a class="dropdown-item" href="#">Write for us</a>
+                    </div>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li> -->
+
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>My First Bootstrap Page</h1>
+        <p>This part is inside a .container class.</p> 
+        <p>The .container class provides a responsive fixed width container.</p>
+        <p>Resize the browser window to see that its width (max-width) will change at different breakpoints.</p>
+      </div>
+</body>
+
+</html>

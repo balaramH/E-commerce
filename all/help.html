@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>E-comm</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200;1,300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+            margin: 5px;
+            padding: 2px;
+        }
+
+        .container3 {
+            border-radius: 45px;
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        select,
+        textarea,
+        label {
+            width: 50%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: auto;
+
+            resize: vertical;
+            display: block;
+        }
+
+        input[type=submit] {
+            background-color: #1347f3;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+
+        input[type=submit]:hover {
+            background-color: #0b0e0b;
+        }
+
+        .navbar {
+            display: flex;
+            flex-flow: row;
+            position: sticky;
+            align-items: center;
+            top: 0px;
+            z-index: 1;
+            font-size: large;
+
+        }
+
+        #navbar {
+            /* overflow: hidden; */
+            background-color: rgb(99, 92, 92);
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #navbar a:hover {
+            background-color: rgb(10, 10, 10);
+            color: rgb(255, 250, 250);
+        }
+
+        #navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+
+        #navbarSupportedContent {
+            float: right;
+        }
+
+        #ff,
+        #ff2,
+        #ff3 {
+            font-family: 'Shalimar', cursive;
+            /* font-family: 'Source Code Pro', monospace; */
+        }
+
+        body {
+            background-color: rgba(202, 212, 212, 0.8);
+            font-family: 'Praise', cursive;
+            color: #000;
+        }
+
+        .bg-img {
+            /* The image used */
+            background-image: url("bk1.jpg");
+
+            min-height: 480px;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 80%;
+            position: relative;
+        }
+
+        .container2 {
+            position: absolute;
+            right: 40%;
+            margin: 20px;
+            max-width: 300px;
+            padding: 16px;
+            background-color: white;
+            display: block;
+            font-size: large;
+
+        }
+
+
+        .navbar2 {
+            overflow: hidden;
+            background-color: rgb(131, 125, 125);
+            position: fixed;
+            bottom: 0;
+            width: 40%;
+            float: right;
+
+        }
+
+        .navbar2 a {
+            float: left;
+            display: block;
+            color: #070707;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+
+
+        }
+
+        .navbar2 a:hover {
+            background: #f1f1f1;
+            color: black;
+        }
+
+        .navbar2 a.active {
+            background-color: #6f7774;
+            color: white;
+            overflow: hidden;
+        }
+
+        .main {
+            padding: 16px;
+            margin-bottom: 30px;
+        }
+
+
+        .container {
+            font-size: large;
+            color: rgb(3, 38, 233);
+
+        }
+
+        .bottom-right {
+            position: absolute;
+            bottom: 5px;
+            right: 30px;
+
+        }
+
+        #help {
+            display: block;        
+         
+           text-align: center;
+           font-size: x-large;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#">E-ComeWorld</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="ecom.html"><i class="fa fa-home"></i> Home <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html"><i class="fa fa-book"></i> About us</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-wrench"></i>
+                        Our Services
+                    </a>
+                    <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown ">
+                        <a class="dropdown-item" href="#">Amazon</a>
+                        <a class="dropdown-item" href="#">Flipcart</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Paytm</a>
+                        <a class="dropdown-item" href="#">Write for us</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><i class="fa fa-phone"></i> Contact Us</a>
+                </li>
+
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0" style="float: right;">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> </button>
+            </form>
+
+        </div>
+    </nav>
+    <div class="container">
+        <h2 style="text-align: center;color: #000;">Our Help Services</h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner ">
+
+                <div class="item active">
+                    <!-- <img src="https://images4.newscred.com/Zz1kNmFkYmFmNzhlNGIxMWViYTU1ZDFmYjg0ZWI5MTc4Zg=="
+                        alt="Los Angeles" style="width:100%;height:150px"> -->
+                    <img src="help2.png" style="width:100%;height:450px">
+                    <div class="bottom-right" style=" color: rgb(8, 8, 8);">
+                        <h3>24 hours tollfree number</h3>
+                        <p>1800 555 966</p>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <img src="helps.png" alt="Chicago" style="width:100%;height:450px">
+                    <div class="bottom-right" style=" color: rgb(249, 252, 250);">
+
+                        <p>Mail us via Gmail</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="help3.jpg" alt="New York" style="width:100%;height:450px">
+                    <div class="bottom-right" style=" color: rgb(151, 14, 14);">
+                        <h3>Our office</h3>
+                        <p>kolkata 700001, Mumbai 1000005</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+
+            </a>
+        </div>
+    </div>
+
+    <div class="col-sm-12" id="help">
+      <p>
+          24 hours help services available here.............
+          and also share feedback by mail or chat ..................
+      </p>
+    </div>
+
+
+    <div class="navbar2" id="foot">
+        <a href="https://www.whatsapp.com/" class="active"><i class="fa fa-whatsapp bg-success"></i> Whatsapps</a>
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook bg-primary"></i> facebook</a>
+        <a href="https://twitter.com/"><i class="fa fa-twitter bg-info"></i> twitter</a>
+        <a href="https://youtube.com/"><i class="fa fa-youtube bg-danger"></i> Youtube</a>
+    </div>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>E-comm</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200;1,300&display=swap"
+        rel="stylesheet">
+        
+    <style>
+        pre{
+            font-size: large;
+        }
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+            margin: 5px;
+            padding: 2px;
+        }
+
+        .navbar {
+            display: flex;
+            flex-flow: row;
+            position: sticky;
+            align-items: center;
+            top: 0px;
+            z-index: 1;
+            font-size: large;
+
+        }
+
+        #navbar {
+            /* overflow: hidden; */
+            background-color: rgb(99, 92, 92);
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+
+        #navbarSupportedContent {
+            float: right;
+        }
+
+        #ff,
+        #ff2,
+        #ff3 {
+            font-family: 'Shalimar', cursive;
+            /* font-family: 'Source Code Pro', monospace; */
+        }
+
+        body {
+            background-color: rgba(202, 212, 212, 0.8);
+            font-family: 'Praise', cursive;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#">E-ComeWorld</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="ecom.html"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html"><i class="fa fa-book"></i> About us</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-wrench"></i>
+                        Our Services
+                    </a>
+                    <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown ">
+                        <a class="dropdown-item" href="#">Amazon</a>
+                        <a class="dropdown-item" href="#">Flipcart</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Paytm</a>
+                        <a class="dropdown-item" href="#">Write for us</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><i class="fa fa-phone"></i> Contact Us</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+        </div>
+    </nav>
+
+    
+
+            <div class="navbar">
+              <a href="#home" class="active">Home</a>
+              <a href="#news">News</a>
+              <a href="#contact">Contact</a>
+            </div>
+            <pre>
+            <h3>Contents</h3>
+            What Is Succession Planning?
+            What Is The Succession Planning Process?
+            Succession Planning: Frequently Asked Questions
+            What’s A Helpful Succession Planning Framework?
+            The Succession Planning Process In 7 Steps
+            The Two Most Common Succession Planning Process Mistakes
+            What Metrics Determine Succession Planning Success?
+            </pre>
+            <pre>
+                What Is Succession Planning?
+Succession planning, as a function of workforce planning, is about replacing leaders and managers 
+with high-potential, internal (sometimes external) replacements. Essentially, it is about identifying, 
+developing, and replacing employees, to make a shift in responsibilities as smooth as possible.
+
+Why Should You Build A ‘Succession Plan’?
+Building a succession planning process or framework is about mitigating organizational shifts.
+ This way, when a change at the very top occurs, the friction between departments, teams, and
+ employee is as smooth as possible, because there is no longer a ‘vacuum’ of institutional knowledge.
+
+What Is The Purpose Of Succession Planning?
+The purpose of succession planning is complex. It is not simply about damage control or replacing a
+ key leader as quickly as possible. Instead, it’s about replacing a leader with someone prepared for
+  the job, with the potential to succeed, who can shift into that role both quickly and successfully 
+  (added emphasis on successfully).
+
+What Is The Succession Planning Process?
+the seven steps of the succession planning process
+Let’s consider the image above as a quick run-through of how the succession planning process works,
+ these are the seven key steps in the succession planning process:
+
+Start identifying key positions
+Identify needs
+Develop your job profiles
+Start the recruiting process
+Appoint a successor
+Handover the job
+Document the transition
+Later on in this article, we break each of these seven steps down so that you can master succession planning with ease!
+
+Discover Personio: Your Entire Org At A Glance
+Organigramm Funktion bei Personio
+Using Personio, your team can develop an org chart to help outline where leaders stand in your company, 
+and who could be primed to succeed them. Here’s everything Personio offers at a glance.
+
+ 
+
+Succession Planning: Frequently Asked Questions
+Who Should Lead Succession Planning?
+HR is primed to be a key leader when it comes to succession planning. That’s because both succession 
+planning and workforce planning go hand in hand. As part of projecting the future of an organization,
+ HR teams need to have an incredibly clear vision of the key roles within an organization, 
+ and what it would mean for those roles to become vacant.
+
+How Does Succession Planning Relate to L&D?
+If we think of succession planning not only as replacing but of adequately preparing employees 
+to take on new roles, HR has a role to play here in terms of career development, learning, and training.
+
+What Are The Benefits Of Succession Planning?
+Because it keeps hiring costs down, improves your employer brand, and boosts retention 
+rates at the same time. Succession planning matters because it helps to maintain a foundation of
+ organizational stability, even in times of profound change. It ensures that even when key 
+ employees, their absence (at least professionally) is not felt.
+
+Is Succession Planning Becoming More Popular?
+The growing demand for succession planning strategies will grow as an entire generational 
+workforce (primarily baby boomers) will retire. As a result, companies need to find qualified 
+employees who can pick up these leadership roles and run with them. In sum, succession planning 
+allows companies to preserve key qualifications while avoiding protracted and costly recruiting processes.
+
+How Often Should Organizations ‘Succession Plan’?
+In general, though, succession planning should be a yearly topic for companies who
+ are growing quickly or thought about in five-year increments for companies on a more steady trajectory of growth.
+
+What’s A Helpful Succession Planning Framework?
+If you want to start a succession planning strategy, you need to have a plan in place.
+
+But, where do you start? Here are some of the general steps you’ll need to take:
+
+Identify
+Identify key positions within your company.
+Assess
+Assess the risk of those positions becoming vacant (account fluctuation rates, retirement dates, etc.)
+Source
+Source talent that is currently within your company.
+Manage
+Manage that talent by developing existing personnel.
+Build Up
+Concurrently, build up a strong talent pool.
+Keep in mind, though, that succession planning is not only relevant for large or medium-sized companies.
+ Even small, family-run businesses should have a plan in place when it comes to successful succession.
+
+Looking to build up talent pools in your org? Read our full guide to it today. 
+
+What Is The First Step In Succession Planning?
+The first step in succession planning has to be identifying key positions. After all, that’s what
+ succession planning is built around: replacing leaders and people in those positions.
+
+As we’ll detail below, though, key positions come in all shapes and sizes. In general, though,
+ it helps to have a strong handle on where the highest amounts of ‘institutional knowledge’
+  exist within your organization. Once you know that, you can prepare for departures accordingly.
+            </pre>
+            
+</body>
+
+</html> -->

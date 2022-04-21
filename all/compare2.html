@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  /* background-image: url('333.jpg'); */
+  background-color: rgb(145, 188, 199);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+
+}
+
+/* Fixed sidenav, full height */
+.sidenav3 {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav3 a, .dropdown-btn3 {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #ffffff;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav3 a:hover, .dropdown-btn3:hover {
+  color: #f1f1f1;
+}
+.sidenav3 a, .dropdown-btn4 {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #ffffff;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav3 a:hover, .dropdown-btn4:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 14px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+ 
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container3 {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+.dropdown-container4 {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav3 {padding-top: 10px;}
+  .sidenav3 a {font-size: 14px;}
+}
+.sidenav3 a, .dropdown-btn5 {
+  padding: 6px 4px 4px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown-container5 {
+  display: none;
+  background-color: #262626;
+  padding-left: 4px;
+}
+/* On mouse-over */
+.sidenav3 a:hover, .dropdown-btn5:hover {
+  color: #f1f1f1;
+}
+ul.nav-pills {
+    top: 20px;
+    position: fixed;
+  }
+  div.col-sm-9 div {
+    height: 250px;
+    font-size: 28px;
+  }
+  #section1 {color: #fff; }
+  #section2 {color: #fff; }
+  #section3 {color: #fff; }
+  #section5 {color: #fff;}
+  #section6 {color: #fff;}
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+      margin-left: 150px;
+    }
+  }
+.col-sm-9{
+  text-align: center;
+}
+</style>
+<script>
+  function myFunction2() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }
+  </script>
+</head>
+<!-- <body> -->
+  <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+    <li class="active"><a href="#section0">Section 1</a></li>
+
+<div class="sidenav3">
+  <a href="ecom.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="help.html">Help</a>
+  <a href="feedback.html">feedback</a>
+  <a href="contact.html">Contact</a>
+  <a href="#">Top page</a>
+  <button class="dropdown-btn3">Electronics
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container3">
+    <ul>
+        <li>
+            <button class="dropdown-btn4">TV
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container4">
+               <ul>
+                <li>
+                    <button class="dropdown-btn5"><a href="#section1">LG</a>                         
+                      </button>
+                      <div class="dropdown-container5">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                          L52-G055
+                        </button>
+                        <a href="#section10">L52-G055</a>
+                        <a href="#section2">L52-G057</a>
+                        <a href="#section3">L52-G059</a>
+                      </div>
+                </li>
+                <li>
+                  <!-- <nav class="col-sm-3" id="myScrollspy">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li class="active"><a href="#section1">Section 1</a></li>                      
+                    </ul>
+                  </nav> -->
+                    <a href="#section4">Sony</a>
+                </li>
+                <li>
+                    <a href="#">Samsung</a>
+                </li>
+               </ul>
+              </div>
+            <!-- <a href="#">TV</a> -->
+        </li>
+        <li>
+            <a href="#">AC</a>
+            
+        </li>
+        <li>
+            <a href="#">Mobile</a>
+
+        </li>
+    </ul>
+  </div>
+  <a href="#contact">Search</a>
+</div>
+
+<div class="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9" style="width: 90%;height: 600px;">
+        <div id="section0">    
+          <h1>Welcome to e-come World Services</h1>
+          <p><img src="bk3.jpg" alt=""  style="background-size: cover; background-repeat: no-repeat;width: 1100px;height: 500px;"></p>         
+         </div>       
+    </div>
+     
+      <div class="col-sm-9" style="width: 90%;height: 600px;padding: 50px 50px 50px 50px;">
+        <div id="section1">    
+          <h1>LG</h1>
+          <p>
+           
+            <img src="lgtv2.jfif" alt=""  style="height: 200px; width: 300px;">
+              <img src="lgtv3.jfif" alt=""  style="height: 200px; width: 300px;">
+             <img src="lg4.jfif" alt=""  style="height: 200px; width: 300px;"></p>         
+         </div>       
+    </div>
+    <div class="col-sm-9" style="width: 90%;height: 600px;">
+
+      <div id="section2">    
+        <h1>Sony</h1>
+        <p><img src="sony1.jfif" alt=""  style="height: 200px; width: 300px;">
+        <img src="sonytv2.jfif" alt=""  style="height: 200px; width: 300px;">
+        <img src="sonytv3.jfif" alt=""  style="height: 200px; width: 300px;"></p>         
+      </div> 
+      </div> 
+      <div class="col-sm-9" style="width: 90%;height: 600px;">
+
+        <div id="section3">    
+          <h1>LG</h1>
+          <p><img src="1.jpg" alt=""  style="height: 200px; width: 300px;">
+          <img src="1.jpg" alt=""  style="height: 200px; width: 300px;">
+          <img src="1.jpg" alt=""  style="height: 200px; width: 300px;"></p>         
+        </div>     
+        
+    </div>
+    <div class="col-sm-9" style="width: 90%;height: 600px;">
+
+      <div id="section4">    
+        <h1>Sony</h1>
+        <p><img src="1.jpg" alt=""  style="height: 200px; width: 300px;">
+        <img src="1.jpg" alt=""  style="height: 200px; width: 300px;">
+        <img src="1.jpg" alt=""  style="height: 200px; width: 300px;"></p>         
+      </div>     
+      </div>
+  </div>
+  </div>
+</div>
+
+
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn3");
+
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+<script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn4");
+    
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn5");
+        
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+        </script>
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="col-sm-4">
+
+          <div class="card" style="width: 30rem;">
+              <div class="card-body  text-dark padding :2px">
+                  <h2 class="card-title bg-info text-white text-center">Flipcart</h2>
+                  <span style="height: 25px;"><img src="1.jpg" class="card-img-top" alt="flipcart.com"></span>
+
+                  <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop
+                      (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                      <br>
+                  <p>
+                      <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                  </p>
+                  <h3 class="bg-success text-white">price:₹55,990 MRP:₹68,192 17% off</h3>
+                  <pre id="ff2">
+Series	Pavilion Gaming
+Brand	HP
+Specific Uses For Product	Personal, gaming, business
+Screen Size	15.6 Inches
+Operating System	Windows 10 Home
+Human Interface Input	Microphone
+CPU Manufacturer	AMD
+Special Feature	Anti reflective
+Colour	Shadow Black
+Connectivity Technology	Wireless
+See less
+About this item
+Processor: AMD Ryzen 5 4600H (3.0 GHz base clock, up to 4.0 GHz max boost clock, 3 MB L2 cache, 6 cores)
+Display: 15.6-Inch FHD IPS anti-glare micro-edge WLED-backlit, 250 nits, 45% NTSC (1920 x 1080)
+Operating System: Pre-loaded Windows 10 Home with lifetime validity
+Graphics: NVIDIA GeForce GTX 1650 (4 GB GDDR6 dedicated)
+                      </pre>
+                  </p>
+                  <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c"
+                      class="btn btn-primary">Go Flipcart</a>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html> 

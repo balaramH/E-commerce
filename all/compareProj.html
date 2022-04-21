@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            background-image: url('bkgr.jfif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: rgb(12, 3, 3);
+        }
+        /* Fixed sidenav, full height */
+        
+        .sidenav3 {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        /* Style the sidenav links and the dropdown button */
+        
+        .sidenav3 a,
+        .dropdown-btn3 {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn3:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav3 a,
+        .dropdown-btn4 {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn4:hover {
+            color: #f1f1f1;
+        }
+        /* Main content */
+        
+        .main {
+            margin-left: 200px;
+            /* Same as the width of the sidenav */
+            font-size: 20px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+        /* Add an active class to the active dropdown button */
+        
+        .active {
+            color: white;
+        }
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        
+        .dropdown-container3 {
+            display: none;
+            background-color: #262626;
+            padding-left: 8px;
+        }
+        
+        .dropdown-container4 {
+            display: none;
+            background-color: #262626;
+            padding-left: 8px;
+        }
+        /* Optional: Style the caret down icon */
+        
+        .fa-caret-down {
+            float: right;
+            padding-right: 8px;
+        }
+        /* Some media queries for responsiveness */
+        
+        @media screen and (max-height: 450px) {
+            .sidenav3 {
+                padding-top: 15px;
+            }
+            .sidenav3 a {
+                font-size: 18px;
+            }
+        }
+        
+        .sidenav3 a,
+        .dropdown-btn5 {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .dropdown-container5 {
+            display: none;
+            background-color: #262626;
+            padding-left: 8px;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn5:hover {
+            color: #f1f1f1;
+        }
+        
+        ul.nav-pills {
+            top: 20px;
+            position: fixed;
+        }
+        
+        div.col-sm-9 div {
+            height: 250px;
+            font-size: 28px;
+        }
+        
+        #section1 {
+            color: #fff;
+        }
+        
+        #section2 {
+            color: #fff;
+        }
+        
+        #section3 {
+            color: #fff;
+        }
+        
+        #section5 {
+            color: #fff;
+        }
+        
+        #section6 {
+            color: #fff;
+        }
+        
+        @media screen and (max-width: 810px) {
+            #section1,
+            #section2,
+            #section3,
+            #section41,
+            #section42 {
+                margin-left: 150px;
+            }
+        }
+        
+        .col-sm-9 {
+            text-align: center;
+        }
+    </style>
+</head>
+<!-- <body> -->
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+    <li class="active"><a href="#section0">Section 1</a></li>
+    <div class="sidenav3">
+        <a href="ecom.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="help.html">Help</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+        <button class="dropdown-btn3"><a href="#">  Electronics </a>
+    <i class="fa fa-caret-down"></i>
+  </button>
+        <div class="dropdown-container3">
+            <ul>
+                <li>
+                    <button class="dropdown-btn4">TV
+                <i class="fa fa-caret-down"></i>
+              </button>
+                    <div class="dropdown-container4">
+                        <ul>
+                            <li>
+                                <button class="dropdown-btn5">LG
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                                <div class="dropdown-container5">
+                                    <a href="#section1">L52-G055</a>
+                                    <a href="#section2">L52-G057</a>
+                                    <a href="#section3">L52-G059</a>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- <nav class="col-sm-3" id="myScrollspy">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li class="active"><a href="#section1">Section 1</a></li>                      
+                    </ul>
+                  </nav> -->
+                                <a href="#section4">Sony</a>
+                            </li>
+                            <li>
+                                <a href="#">Samsung</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <a href="#">TV</a> -->
+                </li>
+                <li>
+                    <a href="#">AC</a>
+
+                </li>
+                <li>
+                    <a href="#">Mobile</a>
+
+                </li>
+            </ul>
+        </div>
+        <a href="#contact">Search</a>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9" style="width: 90%;height: 600px;">
+                    <div id="section0">
+                        <h1>Welcome to e-come World Services</h1>
+                        <p><img src="bknav.jpg" alt="" style="background-size: cover; background-repeat: no-repeat;width: 1100px;height: 500px;"></p>
+                    </div>
+                </div>
+
+                <div class="col-sm-9" style="width: 90%;height: 600px;">
+                    <div id="section1">
+                        <h1>LG</h1>
+                        <p><img src="1.jpg" alt="" style="height: 200px; width: 300px;">
+                            <img src="1.jpg" alt="" style="height: 200px; width: 300px;">
+                            <img src="1.jpg" alt="" style="height: 200px; width: 300px;"></p>
+                    </div>
+                </div>
+                <div class="col-sm-9" style="width: 90%;height: 600px;">
+
+                    <div id="section2">
+                        <h1>Sony</h1>
+                        <p><img src="1.jpg" alt="" style="height: 200px; width: 300px;">
+                            <img src="1.jpg" alt="" style="height: 200px; width: 300px;">
+                            <img src="1.jpg" alt="" style="height: 200px; width: 300px;"></p>
+                    </div>
+                </div>
+                <div class="col-sm-9" style="width: 90%;height: 600px;">
+
+                    <div id="section3">
+                        <h1>LG</h1>
+                        <p><img src="1.jpg" alt="" style="height: 200px; width: 300px;">
+                            <img src="1.jpg" alt="" style="height: 200px; width: 300px;">
+                            <img src="1.jpg" alt="" style="height: 200px; width: 300px;"></p>
+                    </div>
+
+                </div>
+                <div class="col-sm-9" style="width: 90%;height: 600px;">
+
+                    <div id="section4">
+                        <h1>Sony</h1>
+                        <p><img src="1.jpg" alt="" style="height: 200px; width: 300px;">
+                            <img src="1.jpg" alt="" style="height: 200px; width: 300px;">
+                            <img src="1.jpg" alt="" style="height: 200px; width: 300px;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn3");
+
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn4");
+
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn5");
+
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

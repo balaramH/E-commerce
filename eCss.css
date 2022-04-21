@@ -1,0 +1,71 @@
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    padding: 2px;
+}
+
+.navbar {
+    display: flex;
+    flex-flow: row;
+    position: sticky;
+    align-items: center;
+    top: 0px;
+    z-index: 1;
+    font-size: large;
+
+}
+
+#navbar {
+    /* overflow: hidden; */
+    /* background-color: rgb(99, 92, 92);
+     */
+     background-image: url('bknav.jpg');
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-image: url('222.jpg');
+    color: rgb(255, 250, 250);
+}
+
+#navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+#navbarSupportedContent {
+    float: right;
+}
+
+#ff,
+#ff2,
+#ff3 {
+    font-family: 'Shalimar', cursive;
+    /* font-family: 'Source Code Pro', monospace; */
+}
+body {
+    /* background-color: rgba(202, 212, 212, 0.8); */
+    background-image: url('bk3.jpg');
+    background-size: cover;
+    font-family: 'Praise', cursive;
+}
+.row a{
+    display: flex;
+    position:sticky ;
+    z-index: 1;
+    padding: 10px;
+    flex-direction: row;       
+    align-items: center;           
+} 

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+    <!-- cart box link  -->
+
+
+    <!-- font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Caesar+Dressing&family=Flavors&family=Nova+Script&family=Palette+Mosaic&family=Plaster&family=Princess+Sofia&family=Shalimar&family=Source+Code+Pro:ital,wght@1,200;1,300&family=Swanky+and+Moo+Moo&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Nova Script", sans-serif;
+            background-image: url('bk3.jpg');
+            /* background-color: white; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: rgb(0, 0, 0);
+        }
+        
+        table,
+        th,
+        td {
+            background-image: url("333.jpg");
+            border: 20px solid rgb(75, 127, 148);
+        }
+        
+        .box1 {
+            color: rgb(14, 9, 9);
+            padding: 20px 60px 60px 300px;
+            display: none;
+            margin-top: 20px;
+        }
+        /* Fixed sidenav, full height */
+        
+        .sidenav3 {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            /* left: -50%;
+      left: -80px; */
+            /* transition: 0.3s; */
+            /* background-color: #111; */
+            background-image: url('bkwd.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow-x: hidden;
+            padding-top: 15px;
+        }
+        /* Style the sidenav links and the dropdown button */
+        
+        .sidenav3 a,
+        .dropdown-btn3 {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn3:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav3 a,
+        .dropdown-btn4 {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn4:hover {
+            color: #080505;
+        }
+        /* Main content */
+        
+        .main {
+            margin-left: 200px;
+            /* Same as the width of the sidenav */
+            font-size: 20px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+        /* Add an active class to the active dropdown button */
+        
+        .active {
+            color: white;
+        }
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        
+        .dropdown-container3 {
+            display: none;
+            background: none;
+            padding-left: 8px;
+        }
+        
+        .dropdown-container4 {
+            display: none;
+            background: none;
+            padding-left: 2px;
+        }
+        /* Optional: Style the caret down icon */
+        
+        .fa-caret-down {
+            float: right;
+            padding-right: 20px;
+        }
+        /* Some media queries for responsiveness */
+        
+        @media screen and (max-height: 450px) {
+            .sidenav3 {
+                padding-top: 10px;
+            }
+            .sidenav3 a,
+            i {
+                font-size: 20px;
+            }
+        }
+        
+        .sidenav3 i {
+            font-size: 30px;
+        }
+        
+        .sidenav3 caret {
+            font-size: 20px;
+        }
+        
+        .sidenav3 a,
+        .dropdown-btn5 {
+            padding: 6px 4px 4px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .dropdown-container5 {
+            display: none;
+            background: none;
+            padding-left: 4px;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn5:hover {
+            color: red;
+            /* transition: transform .1s;
+            direction: ltr;
+            transform: scale(-0.5); */
+        }
+        
+        ul.nav-pills {
+            top: 20px;
+            position: fixed;
+        }
+        
+        div.col-sm-9 div {
+            height: 250px;
+            font-size: 28px;
+        }
+        
+        .col-sm-9 {
+            text-align: center;
+        }
+        
+        .foot {
+            bottom: 0;
+            /* left: 30%; */
+            position: absolute;
+            background-image: url('333.jpg');
+            font-size: 20px;
+            height: 40px;
+            width: 100%;
+        }
+        
+        .foot a {
+            color: white;
+        }
+        
+        .head1 {
+            float: right;
+            padding: 5px 5px 0px 5px;
+            position: relative;
+        }
+        
+        .dropdown-container4 option {
+            background-color: green;
+            color: white;
+        }
+    </style>
+
+    <script src="cartjs2.js"></script>
+    <script>
+        function getData() {
+            var str = localStorage.getItem('localData');
+            if (str != null) {
+                shoppingCart = JSON.parse(str);
+            }
+
+        }
+
+        function deleteData() {
+            localStorage.clear();
+        }
+        var total_price = 0;
+
+        function showData() {
+            getData();
+            var tbl = document.getElementById('myTableList');
+            var x = tbl.rows.length;
+            while (--x) {
+                tbl.deleteRow(x);
+            }
+            for (let i = 0; i < shoppingCart.length; i++) {
+                var r = tbl.insertRow();
+                var cell1 = r.insertCell();
+                var cell2 = r.insertCell();
+                var cell3 = r.insertCell();
+                // var cell4 = r.delf();
+
+                cell1.innerHTML = shoppingCart[i].Description;
+                cell2.innerHTML = shoppingCart[i].Name;
+                cell3.innerHTML = shoppingCart[i].Price;
+                total_price = total_price + shoppingCart[i].Price;
+            }
+            // cart_total_price += shoppingCart[product].Price;
+
+            var totalprice = total_price;
+            document.getElementById('cart_total').innerHTML = totalprice;
+
+
+        }
+
+        function tt() {
+            showData();
+            document.getElementById('cart_total').innerHTML = totalprice;
+
+        }
+    </script>
+</head>
+<!-- <body> -->
+
+<body style="text-align: center;">
+    <h3>this is my shoping cart list </h3>
+    <br>
+
+    <table cellpadding="4" cellspacing="4" border="1" id="myTable" style="left: 35%; color: rgb(247, 247, 247); position: fixed;font-size: 20px;">
+        <thead>
+
+        </thead>
+        <tbody id="myTableList">
+            <tr>
+                <th>product name</th>
+                <th>product Description</th>
+                <th>product Price</th>
+                <!-- <th>remove item</th> -->
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+
+                <td colspan="4" align="right" id="cart_total">
+
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <script>
+        showData();
+    </script>
+    <div class="sidenav3">
+
+        <a href="ecom.html"><i class="fa fa-home"></i> </a>
+
+        <a href="#contact"> <i class="fa fa-search"></i> </a>
+
+
+    </div>
+
+
+
+
+
+
+    <footer class="foot text-center text-dark">
+
+        <!-- Footer -->
+        <div>
+            <!-- <a href="compare.html" style="float: right; padding-right: 20px;">Top page</a> -->
+            <a href="about.html">About</a>
+            <a href="help.html">Help</a>
+            <a href="feedback.html">feedback</a>
+            <a href="contact.html">Contact</a>
+            <a href="DemoOutCart.html">CartTable</a>
+        </div>
+
+
+
+    </footer>
+    <!-- Footer -->
+
+
+</body>
+
+</html>

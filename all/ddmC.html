@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>E-comm</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+      margin: 5px;
+      padding: 2px;
+    }
+
+    .navbar {
+      display: flex;
+      flex-flow: row;
+      position: sticky;
+      align-items: center;
+      top: 0px;
+      z-index: 1;
+      font-size: large;
+
+    }
+
+    #navbar {
+      overflow: hidden;
+      background-image: url('bknav.jpg');
+    }
+
+    #navbar a {
+      float: left;
+      display: block;
+      color: #ffffff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    #navbar a:hover {
+      background-image: url('333.jpg');
+      color: rgb(255, 255, 255);
+    }
+
+
+    #navbarSupportedContent {
+      float: right;
+    }
+
+    #ff,
+    #ff2,
+    #ff3 {
+      font-family: 'Shalimar', cursive;
+      /* font-family: 'Source Code Pro', monospace; */
+    }
+
+    body { 
+      background-image: url('bk3.jpg');
+      background-repeat: 0;
+      background-size: cover;
+      font-family: 'Praise', cursive;
+    }
+
+    .row a {
+      display: flex;
+      position: sticky;
+      z-index: 1;
+      padding: 10px;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .btn {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      background-color: rgb(7, 4, 4);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: rgb(5, 3, 3);
+    }
+
+    .btn.active {
+      background-color: #666;
+      color: rgb(2, 2, 2);
+    }
+
+    .dropdown-submenu {
+      position: fixed;
+      background-image: url('bkwd.jpg');
+      color: rgb(2, 1, 1);
+      float: left;
+      top: auto;
+      text-align: left;
+
+    }
+
+    .dropdown:hover .dropdown-submenu {
+      display: block;
+      float: left;
+    }
+
+    .dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+      top: 10;
+      left: 100%;
+      margin-top: -5px;
+      background-color: rgb(253, 253, 253);
+      color: black;
+      cursor: pointer;
+      position: fixed;
+
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 10px;
+      color: rgb(255, 255, 255);
+      background-image: url('222.jpg');
+      background-size: cover;
+
+      padding: 5px;
+      position: fixed;
+      top: 85px;
+      left: 40;
+     
+      /* grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer'; */
+      grid-gap: 10px;
+    }
+
+    .grid-container>div {
+    background-image: url('bkgr.jfif');
+      border: 1px solid black;
+      text-align: center;
+      font-size: 15px;
+      margin: 5px;
+      color: rgb(5, 1, 1);
+
+    }
+
+    .grid-container img,
+    p {
+
+      width: 250px;
+      height: auto;
+      text-align: center;
+      padding: 5px 5px 5px 5px;
+
+    }
+
+    /* #tv{
+  margin: auto;
+
+} */
+  </style>
+</head>
+
+<body>
+  <!-- <div class="container mt-3">
+    
+      <ul class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ul>
+ 
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="1.jpg" alt="Los Angeles" style="width: 100%; height: 180px;">
+        </div>
+        <div class="carousel-item">
+          <img src="2.jpg" alt="Chicago" style="width: 100%; height: 180px;">
+        </div>
+        <div class="carousel-item">
+          <img src="3.jpg" alt="New York" style="width: 100%; height: 180px;">
+        </div>
+      </div>
+     
+      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div> -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"> <i class="fa fa-wrench"></i>
+            Electronics
+          </a>
+
+          <div class="dropdown">
+            <!-- <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Electronics
+                    <span class="caret"></span></button> -->
+            <ul class="dropdown-menu">
+              <li class="dropdown-submenu">
+                <a class="test" tabindex="-1" href="#">TV <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <a class="test" href="#">LG <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+
+                      <!-- <li>
+                        <div>
+                          <img id="image" src="1.jpg" alt="photo" style="height: 200px;width: 200px;float: left;">
+
+                          <div>
+                            <button onclick="show_hide()"> <a href="#">LG-100</a></button>
+                          </div> 
+                          <div>
+                            <button onclick="myFunction()">
+                              <a href="#">LG-100</a>
+                            </button>
+                          </div> 
+                           <script>
+                            function myFunction() {
+                              var x = document.createElement("IMG");
+                              x.setAttribute("src", "22.jpg");
+                              x.setAttribute("width", "304");
+                              x.setAttribute("height", "228");
+                              x.setAttribute("left", "558");
+                              x.setAttribute("alt", "The Pulpit Rock");
+                              document.body.appendChild(x);
+                            }
+                            </script>
+                        </div>
+                      </li> -->
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="lgs.jfif" alt="">LG-101</p>
+                        </div>
+                        <div>
+                          <p><img src="lgs.jfif" alt="">LG-102</p>
+                        </div>
+                        <div>
+                          <p><img src="lgs.jfif" alt="">LG-103</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="lgs.jfif" alt="">LG-104</p>
+                        </div>
+                        <div>
+                          <p><img src="lgs.jfif" alt="">LG-105</p>
+                        </div>
+                        <div>
+                          <p><img src="lgs.jfif" alt="">LG-106</p>
+                        </div>
+
+                      </div>
+                      <!-- <li> <a href="#">LG-100</a></li>
+                      <li><a href="#">LG-101</a></li>
+                      <li><a href="#">LG-102</a></li>
+                      <li><a href="#">LG-103</a></li>
+                      <li><a href="#">LG-105</a></li> -->
+                    </ul>
+                    <a class="test" href="#">Sony <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="sonys.jfif" alt="">Sony Braviya-101</p>
+                        </div>
+                        <div>
+                          <p><img src="sonys.jfif" alt="">Sony Braviya-102</p>
+                        </div>
+                        <div>
+                          <p><img src="sonys.jfif" alt="">Sony Braviya-103</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="sonys.jfif" alt="">Sony Braviya-104</p>
+                        </div>
+                        <div>
+                          <p><img src="sonys.jfif" alt="">Sony Braviya-105</p>
+                        </div>
+                        <div>
+                          <p><img src="sonys.jfif" alt="">Sony Braviya-106</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">Sony Braviya-100</a></li>
+                      <li><a href="#">Sony Braviya-101</a></li>
+                      <li><a href="#">Sony Braviya-102</a></li>
+                      <li><a href="#">Sony Braviya-103</a></li>
+                      <li><a href="#">Sony Braviya-105</a></li> -->
+                    </ul>
+                    <a class="test" href="#">Samsung <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="sstv.jfif" alt="">Samsung-101</p>
+                        </div>
+                        <div>
+                          <p><img src="sstv.jfif" alt="">Samsung-102</p>
+                        </div>
+                        <div>
+                          <p><img src="sstv.jfif" alt="">Samsung-103</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="sstv.jfif" alt="">Samsung-104</p>
+                        </div>
+                        <div>
+                          <p><img src="sstv.jfif" alt="">Samsung-105</p>
+                        </div>
+                        <div>
+                          <p><img src="sstv.jfif" alt="">Samsung-106</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">Samsung-100</a></li>
+                      <li><a href="#">Samsung-101</a></li>
+                      <li><a href="#">Samsung-102</a></li>
+                      <li><a href="#">Samsung-103</a></li>
+                      <li><a href="#">Samsung-105</a></li> -->
+                    </ul>
+                    <a class="test" href="#">Onida <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="ontv.jfif" alt="">SOnida101</p>
+                        </div>
+                        <div>
+                          <p><img src="ontv.jfif" alt="">Onida-102</p>
+                        </div>
+                        <div>
+                          <p><img src="ontv.jfif" alt="">Onida-103</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="ontv.jfif" alt="">Onida-104</p>
+                        </div>
+                        <div>
+                          <p><img src="ontv.jfif" alt="">Onida-105</p>
+                        </div>
+                        <div>
+                          <p><img src="ontv.jfif" alt="">Onida-106</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">Onida -100</a></li>
+                      <li><a href="#">Onida -101</a></li>
+                      <li><a href="#">Onida -102</a></li>
+                      <li><a href="#">Onida -103</a></li>
+                      <li><a href="#">Onida -105</a></li> -->
+                    </ul>
+                  </li>
+                </ul>
+
+                <a class="test" tabindex="-1" href="#">AC <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <a class="test" href="#">Hier <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="hirac.jfif" alt="">Hier-101</p>
+                        </div>
+                        <div>
+                          <p><img src="hirac.jfif" alt="">Hier-102</p>
+                        </div>
+                        <div>
+                          <p><img src="hirac.jfif" alt="">Hier-103</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="hirac.jfif" alt="">Hier-104</p>
+                        </div>
+                        <div>
+                          <p><img src="hirac.jfif" alt="">Hier-105</p>
+                        </div>
+                        <div>
+                          <p><img src="hirac.jfif" alt="">Hier-106</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">Hier Air Conditioner-100</a></li>
+                      <li><a href="#">Hier Air Conditioner-101</a></li>
+                      <li><a href="#">Hier Air Conditioner-102</a></li>
+                      <li><a href="#">Hier Air Conditioner-103</a></li>
+                      <li><a href="#">Hier Air Conditioner-105</a></li> -->
+                    </ul>
+                    <a class="test" href="#">Hitachi <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="hiac.jfif" alt="">Hitachi-101</p>
+                        </div>
+                        <div>
+                          <p><img src="hiac.jfif" alt="">Hitachi-102</p>
+                        </div>
+                        <div>
+                          <p><img src="hiac.jfif" alt="">Hitachi-103</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="hiac.jfif" alt="">Hitachi-104</p>
+                        </div>
+                        <div>
+                          <p><img src="hiac.jfif" alt="">Hitachi-105</p>
+                        </div>
+                        <div>
+                          <p><img src="hiac.jfif" alt="">Hitachi-106</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">Hitachi-100</a></li>
+                      <li><a href="#">Hitachi-101</a></li>
+                      <li><a href="#">Hitachi-102</a></li>
+                      <li><a href="#">Hitachi-103</a></li>
+                      <li><a href="#">Hitachi-105</a></li> -->
+                    </ul>
+                    <a class="test" href="#">Havels <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="hac.jfif" alt="">Havels-101</p>
+                        </div>
+                        <div>
+                          <p><img src="hac.jfif" alt="">Havels-102</p>
+                        </div>
+                        <div>
+                          <p><img src="hac.jfif" alt="">Havels-103</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="hac.jfif" alt="">Havels-104</p>
+                        </div>
+                        <div>
+                          <p><img src="hac.jfif" alt="">Havels-105</p>
+                        </div>
+                        <div>
+                          <p><img src="hac.jfif" alt="">Havels-106</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">Havels-100</a></li>
+                      <li><a href="#">Havels-101</a></li>
+                      <li><a href="#">Havels-102</a></li>
+                      <li><a href="#">Havels-103</a></li>
+                      <li><a href="#">Havels-105</a></li> -->
+                    </ul>
+                    <a class="test" href="#">Voltas <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="volAc.jfif" alt="">Voltas-101</p>
+                        </div>
+                        <div>
+                          <p><img src="volAc.jfif" alt="">Voltas-102</p>
+                        </div>
+                        <div>
+                          <p><img src="volAc.jfif" alt="">Voltas-103</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="volAc.jfif" alt="">Voltas-104</p>
+                        </div>
+                        <div>
+                          <p><img src="volAc.jfif" alt="">Voltas-105</p>
+                        </div>
+                        <div>
+                          <p><img src="volAc.jfif" alt="">Voltas-106</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">Voltas -100</a></li>
+                      <li><a href="#">Voltas -101</a></li>
+                      <li><a href="#">Voltas -102</a></li>
+                      <li><a href="#">Voltas -103</a></li>
+                      <li><a href="#">Voltas -105</a></li> -->
+                    </ul>
+                  </li>
+                </ul>
+                <a class="test" tabindex="-1" href="#">Whashing Machine <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <a class="test" href="#">LG <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="lgw.jfif" alt="">LG-1WMc01</p>
+                        </div>
+                        <div>
+                          <p><img src="lgw.jfif" alt="">LG-1WMc01</p>
+                        </div>
+                        <div>
+                          <p><img src="lgw.jfif" alt="">LG-1WMc01</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="lgw.jfif" alt="">LG-1WMc01</p>
+                        </div>
+                        <div>
+                          <p><img src="lgw.jfif" alt="">LG-1WMc01</p>
+                        </div>
+                        <div>
+                          <p><img src="lgw.jfif" alt="">LG-1WMc01</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">LG-1WMc00</a></li>
+                      <li><a href="#">LG-1WMc01</a></li>
+                      <li><a href="#">LG-1WMc02</a></li>
+                      <li><a href="#">LG-1WMc03</a></li>
+                      <li><a href="#">LG-1WMc05</a></li> -->
+                    </ul>
+                    <a class="test" href="#">Wallpoll <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="wpolw.jfif" alt="">wallpoll-wU10KA1</p>
+                        </div>
+                        <div>
+                          <p><img src="wpolw.jfif" alt="">wallpoll-wU10KA1</p>
+                        </div>
+                        <div>
+                          <p><img src="wpolw.jfif" alt="">wallpoll-wU10KA1</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="wpolw.jfif" alt="">wallpoll-wU10KA1</p>
+                        </div>
+                        <div>
+                          <p><img src="wpolw.jfif" alt="">wallpoll-wU10KA1</p>
+                        </div>
+                        <div>
+                          <p><img src="wpolw.jfif" alt="">wallpoll-wU10KA1</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">USHA-U10KA0</a></li>
+                      <li><a href="#">USHA-U10KA1</a></li>
+                      <li><a href="#">USHA-U10KA2</a></li>
+                      <li><a href="#">USHA-U10KA3</a></li>
+                      <li><a href="#">USHA-U10KA5</a></li> -->
+                    </ul>
+                    <a class="test" href="#">BEST <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="bestW.jfif" alt="">BEST-101</p>
+                        </div>
+                        <div>
+                          <p><img src="bestW.jfif" alt="">BEST-102</p>
+                        </div>
+                        <div>
+                          <p><img src="bestW.jfif" alt="">BEST-103</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="bestW.jfif" alt="">BEST-104</p>
+                        </div>
+                        <div>
+                          <p><img src="bestW.jfif" alt="">BEST-105</p>
+                        </div>
+                        <div>
+                          <p><img src="bestW.jfif" alt="">BEST-106</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">BEST-100</a></li>
+                      <li><a href="#">BEST-101</a></li>
+                      <li><a href="#">BEST-102</a></li>
+                      <li><a href="#">BEST-103</a></li>
+                      <li><a href="#">BEST-105</a></li> -->
+                    </ul>
+                    <a class="test" href="#">Onida <span class="caret"></span></a>
+                    <ul class="dropdown-menu ">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="onW.jfif" alt="">Onida -1w0Mc1</p>
+                        </div>
+                        <div>
+                          <p><img src="onW.jfif" alt="">Onida -1w0Mc1</p>
+                        </div>
+                        <div>
+                          <p><img src="onW.jfif" alt="">Onida -1w0Mc1</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="onW.jfif" alt="">Onida -1w0Mc1</p>
+                        </div>
+                        <div>
+                          <p><img src="onW.jfif" alt="">Onida -1w0Mc1</p>
+                        </div>
+                        <div>
+                          <p><img src="onW.jfif" alt="">Onida -1w0Mc1</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">Onida -1w0Mc0</a></li>
+                      <li><a href="#">Onida -1w0Mc1</a></li>
+                      <li><a href="#">Onida -1w0Mc2</a></li>
+                      <li><a href="#">Onida -1w0Mc3</a></li>
+                      <li><a href="#">Onida -1w0Mc5</a></li> -->
+                    </ul>
+                  </li>
+                </ul>
+
+                <a class="test" tabindex="-1" href="#">Refrigarator <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <a class="test" href="#">LG <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="lgR.jfif" alt="">LG-10AJf0</p>
+                        </div>
+                        <div>
+                          <p><img src="lgR.jfif" alt="">LG-10AJf0</p>
+                        </div>
+                        <div>
+                          <p><img src="lgR.jfif" alt="">LG-10AJf0</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="lgR.jfif" alt="">LG-10AJf0</p>
+                        </div>
+                        <div>
+                          <p><img src="lgR.jfif" alt="">LG-10AJf0</p>
+                        </div>
+                        <div>
+                          <p><img src="lgR.jfif" alt="">LG-10AJf0</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">LG-10AJf0</a></li>
+                      <li><a href="#">LG-10AJf1</a></li>
+                      <li><a href="#">LG-10AJf2</a></li>
+                      <li><a href="#">LG-10AJf3</a></li>
+                      <li><a href="#">LG-10AJf5</a></li> -->
+                    </ul>
+                    <a class="test" href="#">Hitachi <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="hitaR.jfif" alt="">Hitachi-10HT0</p>
+                        </div>
+                        <div>
+                          <p><img src="hitaR.jfif" alt="">Hitachi-10HT0</p>
+                        </div>
+                        <div>
+                          <p><img src="hitaR.jfif" alt="">Hitachi-10HT0</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="hitaR.jfif" alt="">Hitachi-10HT0</p>
+                        </div>
+                        <div>
+                          <p><img src="hitaR.jfif" alt="">Hitachi-10HT0</p>
+                        </div>
+                        <div>
+                          <p><img src="hitaR.jfif" alt="">Hitachi-10HT0</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">Hitachi-10HT0</a></li>
+                      <li><a href="#">Hitachi-10HT1</a></li>
+                      <li><a href="#">Hitachi-10HT2</a></li>
+                      <li><a href="#">Hitachi-10HT3</a></li>
+                      <li><a href="#">Hitachi-10HT5</a></li> -->
+                    </ul>
+                    <a class="test" href="#">Godrej <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="gRef.jfif" alt="">Godrej-101</p>
+                        </div>
+                        <div>
+                          <p><img src="gRef.jfif" alt="">Godrej-102</p>
+                        </div>
+                        <div>
+                          <p><img src="gRef.jfif" alt="">Godrej-103</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="gRef.jfif" alt="">Godrej-104</p>
+                        </div>
+                        <div>
+                          <p><img src="gRef.jfif" alt="">Godrej-105</p>
+                        </div>
+                        <div>
+                          <p><img src="gRef.jfif" alt="">Godrej-106</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">Godrej-100</a></li>
+                      <li><a href="#">Godrej-101</a></li>
+                      <li><a href="#">Godrej-102</a></li>
+                      <li><a href="#">Godrej-103</a></li>
+                      <li><a href="#">Godrej-105</a></li> -->
+                    </ul>
+                    <a class="test" href="#">Voltas <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <div class="grid-container">
+                        <div>
+                          <p><img src="volR.jfif" alt="">Voltas -10RF5</p>
+                        </div>
+                        <div>
+                          <p><img src="volR.jfif" alt="">Voltas -10RF8</p>
+                        </div>
+                        <div>
+                          <p><img src="volR.jfif" alt="">Voltas -10RF0</p>
+                        </div>
+
+                        <br>
+                        <div>
+                          <p><img src="volR.jfif" alt="">Voltas -10RF6</p>
+                        </div>
+                        <div>
+                          <p><img src="volR.jfif" alt="">Voltas -10RF9</p>
+                        </div>
+                        <div>
+                          <p><img src="volR.jfif" alt="">Voltas -10RF4</p>
+                        </div>
+
+                      </div>
+                      <!-- <li><a href="#">Voltas -10RF0</a></li>
+                      <li><a href="#">Voltas -10RF1</a></li>
+                      <li><a href="#">Voltas -1RF02</a></li>
+                      <li><a href="#">Voltas -10RF3</a></li>
+                      <li><a href="#">Voltas -10RF5</a></li> -->
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown ">
+                      <li>
+                      </li>               
+                        <a class="dropdown-item" href="#">Amazon</a>
+                        <a class="dropdown-item" href="#">Flipcart</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Paytm</a>
+                        <a class="dropdown-item" href="#">Write for us</a>
+                    </div>
+                     -->
+
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="ecom.html"><i class="fa fa-home"></i> Home <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"><i class="fa fa-book"></i> About us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html"><i class="fa fa-phone"></i> Contact Us</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"><i
+          class="fa fa-search" style="color: rgb(181, 181, 197);"></i>
+        <!-- <button class="btn btn-outline-light text-white my-2 my-sm-0" type="submit" style="background-color: black;"> </button> -->
+      </form>
+
+    </div>
+  </nav>
+  <!-- 
+  <div class="row" style="height: 300;width: 600; justify-content: center; column-gap: 25px;">
+    <div class="column">
+      <img src="bk2.jpg" alt="Snow" style="height: 300px;">
+    </div>
+    
+    <div class="column">
+      <img src="bk1.jpg" alt="Mountains" style="height: 300px">
+    </div>
+  </div> -->
+  <div class="foot" id="foot" style="width: 100%; background-color: black; color:white;
+    text-align: center; font-size: medium ;padding-right: 20px;bottom: 0px; position: fixed;">
+    <footer class="container2">
+
+
+      <a href="help.html"> Help</a>
+      <a href="feedback.html"> Feedback</a>
+
+      </span>
+    </footer>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('.dropdown-submenu a.test').on("click", function (e) {
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+      });
+    });
+  </script>
+  <script>
+    var a;
+    function show_hide() {
+      if (a == 1) {
+        document.getElementById("IMG").style.display = "inline";
+        return a = 0;
+      }
+      else {
+        document.getElementById("IMG").style.display = "none";
+        return a = 1;
+      }
+
+    }
+  </script>
+</body>
+
+</html>

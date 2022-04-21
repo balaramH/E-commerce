@@ -1,0 +1,2193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+    <!-- cart box link  -->
+
+
+    <!-- font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Caesar+Dressing&family=Flavors&family=Nova+Script&family=Palette+Mosaic&family=Plaster&family=Princess+Sofia&family=Shalimar&family=Source+Code+Pro:ital,wght@1,200;1,300&family=Swanky+and+Moo+Moo&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Nova Script", sans-serif;
+            /* background-image: url('bk3.jpg'); */
+            background-color: white;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: rgb(0, 0, 0);
+        }
+        
+        table,
+        th,
+        td {
+            background-image: url("333.jpg");
+            border: 20px solid rgb(75, 127, 148);
+        }
+        
+        .box1 {
+            color: rgb(14, 9, 9);
+            padding: 20px 60px 60px 300px;
+            display: none;
+            margin-top: 20px;
+        }
+        /* Fixed sidenav, full height */
+        
+        .sidenav3 {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            /* left: -50%;
+      left: -80px; */
+            /* transition: 0.3s; */
+            /* background-color: #111; */
+            background-image: url('bkwd.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow-x: hidden;
+            padding-top: 15px;
+        }
+        /* Style the sidenav links and the dropdown button */
+        
+        .sidenav3 a,
+        .dropdown-btn3 {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn3:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav3 a,
+        .dropdown-btn4 {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn4:hover {
+            color: #080505;
+        }
+        /* Main content */
+        
+        .main {
+            margin-left: 200px;
+            /* Same as the width of the sidenav */
+            font-size: 20px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+        /* Add an active class to the active dropdown button */
+        
+        .active {
+            color: white;
+        }
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        
+        .dropdown-container3 {
+            display: none;
+            background: none;
+            padding-left: 8px;
+        }
+        
+        .dropdown-container4 {
+            display: none;
+            background: none;
+            padding-left: 2px;
+        }
+        /* Optional: Style the caret down icon */
+        
+        .fa-caret-down {
+            float: right;
+            padding-right: 20px;
+        }
+        /* Some media queries for responsiveness */
+        
+        @media screen and (max-height: 450px) {
+            .sidenav3 {
+                padding-top: 10px;
+            }
+            .sidenav3 a,
+            i {
+                font-size: 20px;
+            }
+        }
+        
+        .sidenav3 i {
+            font-size: 30px;
+        }
+        
+        .sidenav3 caret {
+            font-size: 20px;
+        }
+        
+        .sidenav3 a,
+        .dropdown-btn5 {
+            padding: 6px 4px 4px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .dropdown-container5 {
+            display: none;
+            background: none;
+            padding-left: 4px;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn5:hover {
+            color: red;
+            /* transition: transform .1s;
+            direction: ltr;
+            transform: scale(-0.5); */
+        }
+        
+        ul.nav-pills {
+            top: 20px;
+            position: fixed;
+        }
+        
+        div.col-sm-9 div {
+            height: 250px;
+            font-size: 28px;
+        }
+        
+        .col-sm-9 {
+            text-align: center;
+        }
+        
+        .foot {
+            bottom: 0;
+            /* left: 30%; */
+            position: absolute;
+            background-image: url('333.jpg');
+            font-size: 20px;
+            height: 40px;
+            width: 100%;
+        }
+        
+        .foot a {
+            color: white;
+        }
+        
+        .head1 {
+            float: right;
+            padding: 5px 5px 0px 5px;
+            position: relative;
+        }
+        
+        .dropdown-container4 option {
+            background-color: green;
+            color: white;
+        }
+    </style>
+
+</head>
+<!-- <body> -->
+
+<body>
+
+
+    <div class="sidenav3">
+
+        <a href="ecom.html"><i class="fa fa-home"></i> </a>
+
+        <a href="#contact"> <i class="fa fa-search"></i> </a>
+
+        <button class="dropdown-btn5"><i class="fa fa-wrench"></i>
+        </button>
+        <div class="dropdown-container5">
+            <button class="dropdown-btn3">Electronics
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container3">
+                <ul>
+                    <li>
+                        <button class="dropdown-btn4">TV
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container4">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <!--dropdown list options-->
+                                        <select>
+                                            <option>Choose company</option>
+                                            <option value="val1">LG</option>
+                                            <option value="val2">Sony</option>
+                                            <option value="val3">Samsung</option>
+                                        </select>
+                                    </div>
+
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- <a href="#">TV</a> -->
+                    </li>
+                    <li>
+                        <button class="dropdown-btn4">AC
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container4">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <!--dropdown list options-->
+                                        <select>
+                                            <option>Choose company</option>
+                                            <option value="val4">Voltas</option>
+                                            <option value="val5">Hier</option>
+                                            <option value="val6">Wallpoll</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- <a href="#">TV</a> -->
+                    </li>
+                    <li>
+                        <button class="dropdown-btn4">Refrizarator
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container4">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <!--dropdown list options-->
+                                        <select>
+                                            <option>Choose company</option>
+                                            <option value="val7">Godrej</option>
+                                            <option value="val8">Hier</option>
+                                            <option value="val9">LG</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- <a href="#">TV</a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="head1">
+        <span>
+            <button type="button" class="btn " data-toggle="modal" data-target="#cartb">                                       
+                                    
+            <p id="result" class="fa fa-shopping-cart" style="font-size: 45px; color: rgb(255, 148, 98);"></p></button>
+        </span>
+    </div>
+
+    <div class="val1 box1">
+        <div class="col-sm-9" style="width: 90%;height: 600px; text-align: center; ">
+            <div>
+                <h1>LG</h1>
+                <p>
+                    <span>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="img/tv/lgtv2.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/lgtv3.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/lg4.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#lg1">
+                                        LG-M5260E
+                                    </button> 
+                                     <button type="button" onclick="myCart()"><input type="checkbox" name="item" /></button>
+                                    
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#lg2">
+                                        LG-M5260E
+                                    </button> 
+                                     <button type="button" onclick="myCart()"><input type="checkbox" name="item" /></button>
+                                    
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#lg3">
+                                        LG-M5260E
+                                    </button> <button type="button" onclick="myCart()"><input type="checkbox" name="item" /></button>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="val2 box1">
+        <div class="col-sm-9" style="width: 90%;height: 600px; text-align: center; ">
+            <div>
+                <h1>Sony</h1>
+                <p>
+                    <span>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="img/tv/sony1.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/sonytv2.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/sonytv3.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Sony-52S60E
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Sony-52S65E
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Sony-52S64E
+                                    </button><input type="checkbox" name="item" />
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="val3 box1">
+        <div class="col-sm-9" style="width: 90%;height: 600px; text-align: center; ">
+            <div>
+                <h1>Samsung</h1>
+                <p>
+                    <span>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="img/tv/samsung11.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/samsung1.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/samsung3.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Samsung-52S41S
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Samsung-52S43S
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Samsung-52S42S
+                                    </button><input type="checkbox" name="item" />
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="val4 box1">
+        <div class="col-sm-9" style="width: 90%;height: 600px; text-align: center; ">
+            <div>
+                <h1>Voltas</h1>
+                <p>
+                    <span>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="img/ac/volAc.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/ac/voltas2.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/ac/voltas3.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#vol1">
+                                        V-M5260S
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#vol2">
+                                        V-M5261S
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#vol3">
+                                        V-M5262S
+                                    </button><input type="checkbox" name="item" />
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="val5 box1">
+        <div class="col-sm-9" style="width: 90%;height: 600px; text-align: center; ">
+            <div>
+                <h1>Sony</h1>
+                <p>
+                    <span>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="img/tv/sony1.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/sonytv2.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/sonytv3.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Sony-52S60E
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Sony-52S65E
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Sony-52S64E
+                                    </button><input type="checkbox" name="item" />
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="val6 box1">
+        <div class="col-sm-9" style="width: 90%;height: 600px; text-align: center; ">
+            <div>
+                <h1>Samsung</h1>
+                <p>
+                    <span>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="img/tv/samsung11.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/samsung1.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/samsung3.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Samsung-52S41S
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Samsung-52S43S
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Samsung-52S42S
+                                    </button><input type="checkbox" name="item" />
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div class="val7 box1">
+        <div class="col-sm-9" style="width: 90%;height: 600px; text-align: center; ">
+            <div>
+                <h1>Godrej Refrizarator</h1>
+                <p>
+                    <span>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="img/ref/gRef.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/ref/gref2.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/ref/gref3.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#godrej1">
+                                        LG-M5260E
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#godrej2">
+                                        LG-M5260E
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#godrej3">
+                                        LG-M5260E
+                                    </button><input type="checkbox" name="item" />
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="val8 box1">
+        <div class="col-sm-9" style="width: 90%;height: 600px; text-align: center; ">
+            <div>
+                <h1>Sony</h1>
+                <p>
+                    <span>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="img/tv/sony1.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/sonytv2.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/sonytv3.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Sony-52S60E
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Sony-52S65E
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Sony-52S64E
+                                    </button><input type="checkbox" name="item" />
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="val9 box1">
+        <div class="col-sm-9" style="width: 90%;height: 600px; text-align: center; ">
+            <div>
+                <h1>Samsung</h1>
+                <p>
+                    <span>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="img/tv/samsung11.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/samsung1.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/samsung3.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Samsung-52S41S
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Samsung-52S43S
+                                    </button> <input type="checkbox" name="item" />
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#basicExampleModal">
+                                        Samsung-52S42S
+                                    </button><input type="checkbox" name="item" />
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- dropdown button3 work script -->
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn3");
+
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <!-- dropdown button4 work script sub dropwn -->
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn4");
+
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <!-- dropdown button5 work script sub multi level -->
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn5");
+
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+    <!-- Modal 1-->
+    <div class="modal fade" id="lg1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <span style="height: 25px;"><img src="img/tv/lgtv2.jfif" class="card-img-top"
+                                        alt="flipcart.com"></span>
+
+                                <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                                    <br>
+                                    <p>
+                                        <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                                    </p>
+                                    <h3 class="bg-success text-white">price:₹17,590 MRP:₹18,192 17% off</h3>
+                                    <pre id="ff2">
+* The products represented in the content feature the LG SIGNATURE OLED TV and the LG OLED TV.
+* Images/features of product may vary by region, country or model.
+* For LG SIGNATURE OLED TV W9, included TV-to-AV Box cable is required for TV operation. 
+Please consult with your local installer for proper installation.
+LG AI TV is available in the following 10 languages and the feature may differ by country. 
+: English (USA/Australia/Canada/United Kingdom), German, Spanish (Mexico/Spain), French,
+ Italian, Polish, Portuguese (Brazil), Turkish, Russian, Korean.
+* Scope of service may vary by region.
+* Please refer to service details on your LG AI TV Manual.
+* Requires LG Magic Remote and separate purchase may be necessary.
+                                </pre>
+                                </p>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Flipcart</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Amazon</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Paytm</a>
+                                <a href="https://www.lg.com/hk_en/oled-tvs/2021/a9-ai-processor" class="btn btn-primary">Go LG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="lg2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <span style="height: 25px;"><img src="img/tv/lgtv3.jfif" class="card-img-top"
+                                       alt="flipcart.com"></span>
+
+                                <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                                    <br>
+                                    <p>
+                                        <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                                    </p>
+                                    <h3 class="bg-success text-white">price:₹17,590 MRP:₹18,192 17% off</h3>
+                                    <pre id="ff2">
+* The products represented in the content feature the LG SIGNATURE OLED TV and the LG OLED TV.
+* Images/features of product may vary by region, country or model.
+* For LG SIGNATURE OLED TV W9, included TV-to-AV Box cable is required for TV operation. 
+Please consult with your local installer for proper installation.
+LG AI TV is available in the following 10 languages and the feature may differ by country. 
+: English (USA/Australia/Canada/United Kingdom), German, Spanish (Mexico/Spain), French,
+Italian, Polish, Portuguese (Brazil), Turkish, Russian, Korean.
+* Scope of service may vary by region.
+* Please refer to service details on your LG AI TV Manual.
+* Requires LG Magic Remote and separate purchase may be necessary.
+                               </pre>
+                                </p>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Flipcart</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Amazon</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Paytm</a>
+                                <a href="https://www.lg.com/hk_en/oled-tvs/2021/a9-ai-processor" class="btn btn-primary">Go LG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="modal fade" id="lg3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <span style="height: 25px;"><img src="img/tv/lg4.jfif" class="card-img-top"
+                                       alt="flipcart.com"></span>
+
+                                <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                                    <br>
+                                    <p>
+                                        <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                                    </p>
+                                    <h3 class="bg-success text-white">price:₹17,590 MRP:₹18,192 17% off</h3>
+                                    <pre id="ff2">
+* The products represented in the content feature the LG SIGNATURE OLED TV and the LG OLED TV.
+* Images/features of product may vary by region, country or model.
+* For LG SIGNATURE OLED TV W9, included TV-to-AV Box cable is required for TV operation. 
+Please consult with your local installer for proper installation.
+LG AI TV is available in the following 10 languages and the feature may differ by country. 
+: English (USA/Australia/Canada/United Kingdom), German, Spanish (Mexico/Spain), French,
+Italian, Polish, Portuguese (Brazil), Turkish, Russian, Korean.
+* Scope of service may vary by region.
+* Please refer to service details on your LG AI TV Manual.
+* Requires LG Magic Remote and separate purchase may be necessary.
+                               </pre>
+                                </p>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Flipcart</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Amazon</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Paytm</a>
+                                <a href="https://www.lg.com/hk_en/oled-tvs/2021/a9-ai-processor" class="btn btn-primary">Go LG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 1-->
+    <div class="modal fade" id="vol1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <span style="height: 25px;"><img src="img/ac/volAc.jfif" class="card-img-top"
+                                     alt="flipcart.com"></span>
+
+                                <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                                    <br>
+                                    <p>
+                                        <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                                    </p>
+                                    <h3 class="bg-success text-white">price:₹17,590 MRP:₹18,192 17% off</h3>
+                                    <pre id="ff2">
+* The products represented in the content feature the LG SIGNATURE OLED TV and the LG OLED TV.
+* Images/features of product may vary by region, country or model.
+* For LG SIGNATURE OLED TV W9, included TV-to-AV Box cable is required for TV operation. 
+Please consult with your local installer for proper installation.
+LG AI TV is available in the following 10 languages and the feature may differ by country. 
+: English (USA/Australia/Canada/United Kingdom), German, Spanish (Mexico/Spain), French,
+Italian, Polish, Portuguese (Brazil), Turkish, Russian, Korean.
+* Scope of service may vary by region.
+* Please refer to service details on your LG AI TV Manual.
+* Requires LG Magic Remote and separate purchase may be necessary.
+                             </pre>
+                                </p>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Flipcart</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Amazon</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Paytm</a>
+                                <a href="https://www.lg.com/hk_en/oled-tvs/2021/a9-ai-processor" class="btn btn-primary">Go LG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="vol2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <span style="height: 25px;"><img src="img/ac/voltas2.jfif" class="card-img-top"
+                                    alt="flipcart.com"></span>
+
+                                <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                                    <br>
+                                    <p>
+                                        <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                                    </p>
+                                    <h3 class="bg-success text-white">price:₹17,590 MRP:₹18,192 17% off</h3>
+                                    <pre id="ff2">
+* The products represented in the content feature the LG SIGNATURE OLED TV and the LG OLED TV.
+* Images/features of product may vary by region, country or model.
+* For LG SIGNATURE OLED TV W9, included TV-to-AV Box cable is required for TV operation. 
+Please consult with your local installer for proper installation.
+LG AI TV is available in the following 10 languages and the feature may differ by country. 
+: English (USA/Australia/Canada/United Kingdom), German, Spanish (Mexico/Spain), French,
+Italian, Polish, Portuguese (Brazil), Turkish, Russian, Korean.
+* Scope of service may vary by region.
+* Please refer to service details on your LG AI TV Manual.
+* Requires LG Magic Remote and separate purchase may be necessary.
+                            </pre>
+                                </p>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Flipcart</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Amazon</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Paytm</a>
+                                <a href="https://www.lg.com/hk_en/oled-tvs/2021/a9-ai-processor" class="btn btn-primary">Go LG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="modal fade" id="vol3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <span style="height: 25px;"><img src="img/ac/voltas3.jfif" class="card-img-top"
+                                    alt="flipcart.com"></span>
+
+                                <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                                    <br>
+                                    <p>
+                                        <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                                    </p>
+                                    <h3 class="bg-success text-white">price:₹17,590 MRP:₹18,192 17% off</h3>
+                                    <pre id="ff2">
+* The products represented in the content feature the LG SIGNATURE OLED TV and the LG OLED TV.
+* Images/features of product may vary by region, country or model.
+* For LG SIGNATURE OLED TV W9, included TV-to-AV Box cable is required for TV operation. 
+Please consult with your local installer for proper installation.
+LG AI TV is available in the following 10 languages and the feature may differ by country. 
+: English (USA/Australia/Canada/United Kingdom), German, Spanish (Mexico/Spain), French,
+Italian, Polish, Portuguese (Brazil), Turkish, Russian, Korean.
+* Scope of service may vary by region.
+* Please refer to service details on your LG AI TV Manual.
+* Requires LG Magic Remote and separate purchase may be necessary.
+                            </pre>
+                                </p>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Flipcart</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Amazon</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Paytm</a>
+                                <a href="https://www.lg.com/hk_en/oled-tvs/2021/a9-ai-processor" class="btn btn-primary">Go LG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 1-->
+    <div class="modal fade" id="godrej1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <span style="height: 25px;"><img src="img/ref/gRef.jfif" class="card-img-top"
+                                     alt="flipcart.com"></span>
+
+                                <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                                    <br>
+                                    <p>
+                                        <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                                    </p>
+                                    <h3 class="bg-success text-white">price:₹17,590 MRP:₹18,192 17% off</h3>
+                                    <pre id="ff2">
+* The products represented in the content feature the LG SIGNATURE OLED TV and the LG OLED TV.
+* Images/features of product may vary by region, country or model.
+* For LG SIGNATURE OLED TV W9, included TV-to-AV Box cable is required for TV operation. 
+Please consult with your local installer for proper installation.
+LG AI TV is available in the following 10 languages and the feature may differ by country. 
+: English (USA/Australia/Canada/United Kingdom), German, Spanish (Mexico/Spain), French,
+Italian, Polish, Portuguese (Brazil), Turkish, Russian, Korean.
+* Scope of service may vary by region.
+* Please refer to service details on your LG AI TV Manual.
+* Requires LG Magic Remote and separate purchase may be necessary.
+                             </pre>
+                                </p>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Flipcart</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Amazon</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Paytm</a>
+                                <a href="https://www.lg.com/hk_en/oled-tvs/2021/a9-ai-processor" class="btn btn-primary">Go LG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="godrej2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <span style="height: 25px;"><img src="img/ref/gref2.jfif" class="card-img-top"
+                                    alt="flipcart.com"></span>
+
+                                <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                                    <br>
+                                    <p>
+                                        <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                                    </p>
+                                    <h3 class="bg-success text-white">price:₹17,590 MRP:₹18,192 17% off</h3>
+                                    <pre id="ff2">
+* The products represented in the content feature the LG SIGNATURE OLED TV and the LG OLED TV.
+* Images/features of product may vary by region, country or model.
+* For LG SIGNATURE OLED TV W9, included TV-to-AV Box cable is required for TV operation. 
+Please consult with your local installer for proper installation.
+LG AI TV is available in the following 10 languages and the feature may differ by country. 
+: English (USA/Australia/Canada/United Kingdom), German, Spanish (Mexico/Spain), French,
+Italian, Polish, Portuguese (Brazil), Turkish, Russian, Korean.
+* Scope of service may vary by region.
+* Please refer to service details on your LG AI TV Manual.
+* Requires LG Magic Remote and separate purchase may be necessary.
+                            </pre>
+                                </p>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Flipcart</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Amazon</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Paytm</a>
+                                <a href="https://www.lg.com/hk_en/oled-tvs/2021/a9-ai-processor" class="btn btn-primary">Go LG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="modal fade" id="godrej3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <span style="height: 25px;"><img src="img/ref/gref3.jfif" class="card-img-top"
+                                    alt="flipcart.com"></span>
+
+                                <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                                    <br>
+                                    <p>
+                                        <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                                    </p>
+                                    <h3 class="bg-success text-white">price:₹17,590 MRP:₹18,192 17% off</h3>
+                                    <pre id="ff2">
+* The products represented in the content feature the LG SIGNATURE OLED TV and the LG OLED TV.
+* Images/features of product may vary by region, country or model.
+* For LG SIGNATURE OLED TV W9, included TV-to-AV Box cable is required for TV operation. 
+Please consult with your local installer for proper installation.
+LG AI TV is available in the following 10 languages and the feature may differ by country. 
+: English (USA/Australia/Canada/United Kingdom), German, Spanish (Mexico/Spain), French,
+Italian, Polish, Portuguese (Brazil), Turkish, Russian, Korean.
+* Scope of service may vary by region.
+* Please refer to service details on your LG AI TV Manual.
+* Requires LG Magic Remote and separate purchase may be necessary.
+                            </pre>
+                                </p>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Flipcart</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Amazon</a>
+                                <a href="https://www.flipkart.com/hp-pavilion-gaming-ryzen-5-hexa-core-4600h-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1650-15-ec1021ax-laptop/p/itm70c8fb9efbb8c" class="btn btn-primary">Go Paytm</a>
+                                <a href="https://www.lg.com/hk_en/oled-tvs/2021/a9-ai-processor" class="btn btn-primary">Go LG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cartbox -->
+    <div class="modal fade" id="cartb" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">Your Cart order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <table id="cartlist" style="color: white;background: none;">
+                            <tr>
+                                <!-- <th>id</th>
+                                <th>img</th>
+                                <th>price</th>
+                                <th>itemCount </th>
+                                <th>value</th> -->
+                            </tr>
+                            <!-- <tr>
+                                <td>$nbsp</td>
+                                <td><img src="1.jpg" alt="" style="height: 100px;width: 150px;"></td>
+                                <td>12545</td>
+                                <td>1</td>
+                                <td>15205</td>
+                            </tr> -->
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sohw and hide option script -->
+    <!--importing jquery cdn-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>
+    <script>
+        // jQuery functions to hide and show the div
+        $(document).ready(function() {
+            $("select").change(function() {
+                $(this).find("option:selected")
+                    .each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".box1").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".box1").hide();
+                        }
+                    });
+            }).change();
+        });
+    </script>
+
+    <!-- modal script  -->
+    <script>
+        $(function() {
+            $('[data-toggle="modal"]').hover(function() {
+                var modalId = $(this).data('target');
+                $(modalId).modal('show');
+            });
+        });
+    </script>
+    <footer class="foot text-center text-dark">
+
+        <!-- Footer -->
+        <div>
+            <!-- <a href="compare.html" style="float: right; padding-right: 20px;">Top page</a> -->
+            <a href="about.html">About</a>
+            <a href="help.html">Help</a>
+            <a href="feedback.html">feedback</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- checkbox count script  -->
+        <script>
+            showChecked();
+
+            function showChecked() {
+                document.getElementById("result").textContent = "" + document.querySelectorAll("input:checked").length;
+            }
+            document.querySelectorAll("input[name=item]").forEach(i => {
+                i.onclick = function() {
+                    showChecked();
+                }
+            });
+        </script>
+    </footer>
+    <!-- Footer -->
+
+    <!-- table script for cart box -->
+    <script>
+        function myCart() {
+            var table = document.getElementById("cartlist");
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            cell1.innerHTML = "id";
+            cell2.innerHTML = "img";
+            cell3.innerHTML = "price";
+            cell4.innerHTML = "item peace";
+            cell5.innerHTML = "value";
+        }
+    </script>
+
+    <!-- cartbox2  -->
+    <script>
+        function addRow() {              
+            var myName = document.getElementById("name");    
+            var price = document.getElementById("price"); 
+            var count = document.getElementById("count");    
+            var total = document.getElementById("total");       
+            var table = document.getElementById("myTableData");     
+            var rowCount = table.rows.length;    
+            var row = table.insertRow(rowCount);     
+            row.insertCell(0).innerHTML = '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';    
+            row.insertCell(1).innerHTML = myName.value;    
+            row.insertCell(2).innerHTML = price.value;
+            row.insertCell(3).innerHTML = count.value; 
+            row.insertCell(4).innerHTML = total.value;  
+        } 
+        function deleteRow(obj) {          
+            var index = obj.parentNode.parentNode.rowIndex;    
+            var table = document.getElementById("myTableData");    
+            table.deleteRow(index);    
+        } 
+        function addTable() {          
+            var myTableDiv = document.getElementById("myDynamicTable");          
+            var table = document.createElement('TABLE');    
+            table.border = '1';        
+            var tableBody = document.createElement('TBODY');    
+            table.appendChild(tableBody);          
+            for (var i = 0; i < 3; i++) {       
+                var tr = document.createElement('TR');       
+                tableBody.appendChild(tr);              
+                for (var j = 0; j < 4; j++) {           
+                    var td = document.createElement('TD');           
+                    td.width = '75';           
+                    td.appendChild(document.createTextNode("Cell " + i + "," + j));           
+                    tr.appendChild(td);       
+                }    
+            }    
+            myTableDiv.appendChild(table);    
+        } 
+        function load() {        
+            console.log("Page load finished"); 
+        }
+    </script>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+    <!-- cart box link  -->
+
+
+    <!-- font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Caesar+Dressing&family=Flavors&family=Nova+Script&family=Palette+Mosaic&family=Plaster&family=Princess+Sofia&family=Shalimar&family=Source+Code+Pro:ital,wght@1,200;1,300&family=Swanky+and+Moo+Moo&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Nova Script", sans-serif;
+            /* background-image: url('bk3.jpg'); */
+            background-color: white;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: rgb(0, 0, 0);
+        }
+        
+        table,
+        th,
+        td {
+            background-image: url("333.jpg");
+            border: 20px solid rgb(75, 127, 148);
+        }
+        
+        .box1 {
+            color: rgb(14, 9, 9);
+            padding: 20px 60px 60px 300px;
+            display: none;
+            margin-top: 20px;
+        }
+        /* Fixed sidenav, full height */
+        
+        .sidenav3 {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            /* left: -50%;
+      left: -80px; */
+            /* transition: 0.3s; */
+            /* background-color: #111; */
+            background-image: url('bkwd.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow-x: hidden;
+            padding-top: 15px;
+        }
+        /* Style the sidenav links and the dropdown button */
+        
+        .sidenav3 a,
+        .dropdown-btn3 {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn3:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav3 a,
+        .dropdown-btn4 {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn4:hover {
+            color: #080505;
+        }
+        /* Main content */
+        
+        .main {
+            margin-left: 200px;
+            /* Same as the width of the sidenav */
+            font-size: 20px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+        /* Add an active class to the active dropdown button */
+        
+        .active {
+            color: white;
+        }
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        
+        .dropdown-container3 {
+            display: none;
+            background: none;
+            padding-left: 8px;
+        }
+        
+        .dropdown-container4 {
+            display: none;
+            background: none;
+            padding-left: 2px;
+        }
+        /* Optional: Style the caret down icon */
+        
+        .fa-caret-down {
+            float: right;
+            padding-right: 20px;
+        }
+        /* Some media queries for responsiveness */
+        
+        @media screen and (max-height: 450px) {
+            .sidenav3 {
+                padding-top: 10px;
+            }
+            .sidenav3 a,
+            i {
+                font-size: 20px;
+            }
+        }
+        
+        .sidenav3 i {
+            font-size: 30px;
+        }
+        
+        .sidenav3 caret {
+            font-size: 20px;
+        }
+        
+        .sidenav3 a,
+        .dropdown-btn5 {
+            padding: 6px 4px 4px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .dropdown-container5 {
+            display: none;
+            background: none;
+            padding-left: 4px;
+        }
+        /* On mouse-over */
+        
+        .sidenav3 a:hover,
+        .dropdown-btn5:hover {
+            color: red;
+            /* transition: transform .1s;
+            direction: ltr;
+            transform: scale(-0.5); */
+        }
+        
+        ul.nav-pills {
+            top: 20px;
+            position: fixed;
+        }
+        
+        div.col-sm-9 div {
+            height: 250px;
+            font-size: 28px;
+        }
+        
+        .col-sm-9 {
+            text-align: center;
+        }
+        
+        .foot {
+            bottom: 0;
+            /* left: 30%; */
+            position: absolute;
+            background-image: url('333.jpg');
+            font-size: 20px;
+            height: 40px;
+            width: 100%;
+        }
+        
+        .foot a {
+            color: white;
+        }
+        
+        .head1 {
+            float: right;
+            padding: 5px 5px 0px 5px;
+            position: relative;
+        }
+        
+        .dropdown-container4 option {
+            background-color: green;
+            color: white;
+        }
+    </style>
+
+</head>
+<!-- <body> -->
+
+<body>
+
+
+    <div class="sidenav3">
+
+        <a href="ecom.html"><i class="fa fa-home"></i> </a>
+
+        <a href="#contact"> <i class="fa fa-search"></i> </a>
+
+        <button class="dropdown-btn5"><i class="fa fa-wrench"></i>
+        </button>
+        <div class="dropdown-container5">
+            <button class="dropdown-btn3">Electronics
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container3">
+                <ul>
+                    <li>
+                        <button class="dropdown-btn4">TV
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container4">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <!--dropdown list options-->
+                                        <select>
+                                            <option>Choose company</option>
+                                            <option value="val1">LG</option>
+                                            <option value="val2">Sony</option>
+                                            <option value="val3">Samsung</option>
+                                        </select>
+                                    </div>
+
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- <a href="#">TV</a> -->
+                    </li>
+                    <li>
+                        <button class="dropdown-btn4">AC
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container4">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <!--dropdown list options-->
+                                        <select>
+                                            <option>Choose company</option>
+                                            <option value="val4">Voltas</option>
+                                            <option value="val5">Hier</option>
+                                            <option value="val6">Wallpoll</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- <a href="#">TV</a> -->
+                    </li>
+                    <li>
+                        <button class="dropdown-btn4">Refrizarator
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container4">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <!--dropdown list options-->
+                                        <select>
+                                            <option>Choose company</option>
+                                            <option value="val7">Godrej</option>
+                                            <option value="val8">Hier</option>
+                                            <option value="val9">LG</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- <a href="#">TV</a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="val1 box1">
+        <div class="col-sm-9" style="width: 90%;height: 600px; text-align: center; ">
+            <div>
+                <h1>LG</h1>
+                <p>
+                    <span>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="img/tv/lgtv2.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/lgtv3.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                                <th>
+                                    <img src="img/tv/lg4.jfif" alt="" style="height: 200px; width: 300px;">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#lg1">
+                                        <label for="myCheck1">
+                                            LG-M5260E
+                                        </label> 
+                                    </button> 
+                                    <label for="myCheck1">Checkbox:</label> 
+<input type="checkbox" id="myCheck1" onclick="myCdoc()">
+ <table id="cartl" style="display:none">
+                                    <!-- <input type="checkbox" id="myCheck1" onclick="myCdoc()"> -->
+                                     <input type="checkbox" name="item"  id="myCheck11"  onclick="myCdoc()"/>
+                                    
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#lg2">
+                                        LG-M5260E
+                                    </button> 
+                                     <button type="button" onclick="myCart()">
+                                        <input type="checkbox" name="item" /></button>
+                                    
+                                </td>
+                                <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#lg3">
+                                        LG-M5260E
+                                    </button> <button type="button" onclick="myCart()"><input type="checkbox" name="item" /></button>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- dropdown button3 work script -->
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn3");
+
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <!-- dropdown button4 work script sub dropwn -->
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn4");
+
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <!-- dropdown button5 work script sub multi level -->
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn5");
+
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+    <!-- Modal 1-->
+    <div class="modal fade" id="lg1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <table>
+                                    <tr>
+                                        <th>
+
+                                            <span style="height: 25px;"><img src="img/tv/lgtv2.jfif" class="card-img-top"
+                                                    alt="flipcart.com"></span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            <h3 class="bg-success text-white">price:₹17,590 MRP:₹18,192 17% off</h3>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="lg2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <span style="height: 25px;"><img src="img/tv/lgtv3.jfif" class="card-img-top"
+                                       alt="flipcart.com"></span>
+
+                                <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                                    <br>
+                                    <p>
+                                        <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="modal fade" id="lg3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">LG-M5260E</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body  text-dark padding :2px">
+                                <h2 class="card-title bg-info text-white text-center">E-com world</h2>
+                                <span style="height: 25px;"><img src="img/tv/lg4.jfif" class="card-img-top"
+                                       alt="flipcart.com"></span>
+
+                                <p class="card-text text-align :left">HP Pavilion Gaming 15.6-inch(39.62 cms) FHD Gaming Laptop (Ryzen 5-4600H/8GB/1TB HDD/M.2 Slot/Windows 10/NVIDIA GTX 1650 4GB/Shadow Black), 15-ec1024AX.
+                                    <br>
+                                    <p>
+                                        <span><img src="2fl.png" alt="logo" style="height: 30px ;width: 25%;"></span>
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal cartbox -->
+    <div class="modal fade" id="cartb" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">Your Cart order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <table id="cartl" style="display:none">
+                            <tr>
+                                <th>
+
+                                    <span style="height: 25px;"><img src="https://global-uploads.webflow.com/5ef5480befd392489dacf544/5f9f5e5943de7e69a1339242_5f44a7398c0cdf460857e744_img-image.jpeg" class="card-img-top"
+                                                                        alt="flipcart.com"></span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <h3 class="bg-success text-white">price:₹17,590 MRP:₹18,192 17% off</h3>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sohw and hide option script -->
+    <!--importing jquery cdn-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>
+    <script>
+        // jQuery functions to hide and show the div
+        $(document).ready(function() {
+            $("select").change(function() {
+                $(this).find("option:selected")
+                    .each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".box1").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".box1").hide();
+                        }
+                    });
+            }).change();
+        });
+    </script>
+
+    <!-- checkbox display contain  -->
+    <script>
+        function myCdoc() {
+            var checkBox = document.getElementById("myCheck11");
+            var text = document.getElementById("cartl");
+            if (checkBox.checked == true) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- modal script  -->
+    <script>
+        $(function() {
+            $('[data-toggle="modal"]').hover(function() {
+                var modalId = $(this).data('target');
+                $(modalId).modal('show');
+            });
+        });
+    </script>
+    <footer class="foot text-center text-dark">
+
+        <!-- Footer -->
+        <div>
+            <!-- <a href="compare.html" style="float: right; padding-right: 20px;">Top page</a> -->
+            <a href="about.html">About</a>
+            <a href="help.html">Help</a>
+            <a href="feedback.html">feedback</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- checkbox count script  -->
+        <script>
+            showChecked();
+
+
+
+            function showChecked() {
+                document.getElementById("result").textContent = "" + document.querySelectorAll("input:checked").length;
+            }
+            document.querySelectorAll("input[name=item]").forEach(i => {
+                i.onclick = function() {
+                    showChecked();
+                }
+
+            });
+        </script>
+    </footer>
+    <!-- Footer -->
+
+    <!-- table script for cart box -->
+    <!-- <script>
+        function myCart() {
+            var table = document.getElementById("cartlist");
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            cell1.innerHTML = "id";
+            cell2.innerHTML = "img";
+            cell3.innerHTML = "price";
+            cell4.innerHTML = "item peace";
+            cell5.innerHTML = "value";
+        }
+    </script> -->
+
+    <!-- cartbox2  -->
+    <script>
+        function addRow() {              
+            var myName = document.getElementById("name");    
+            var price = document.getElementById("price"); 
+            var count = document.getElementById("count");    
+            var total = document.getElementById("total");       
+            var table = document.getElementById("myTableData");     
+            var rowCount = table.rows.length;    
+            var row = table.insertRow(rowCount);     
+            row.insertCell(0).innerHTML = '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';    
+            row.insertCell(1).innerHTML = myName.value;    
+            row.insertCell(2).innerHTML = price.value;
+            row.insertCell(3).innerHTML = count.value; 
+            row.insertCell(4).innerHTML = total.value;  
+        } 
+        function deleteRow(obj) {          
+            var index = obj.parentNode.parentNode.rowIndex;    
+            var table = document.getElementById("myTableData");    
+            table.deleteRow(index);    
+        } 
+        function addTable() {          
+            var myTableDiv = document.getElementById("myDynamicTable");          
+            var table = document.createElement('TABLE');    
+            table.border = '1';        
+            var tableBody = document.createElement('TBODY');    
+            table.appendChild(tableBody);          
+            for (var i = 0; i < 3; i++) {       
+                var tr = document.createElement('TR');       
+                tableBody.appendChild(tr);              
+                for (var j = 0; j < 4; j++) {           
+                    var td = document.createElement('TD');           
+                    td.width = '75';           
+                    td.appendChild(document.createTextNode("Cell " + i + "," + j));           
+                    tr.appendChild(td);       
+                }    
+            }    
+            myTableDiv.appendChild(table);    
+        } 
+        function load() {        
+            console.log("Page load finished"); 
+        }
+    </script>
+
+</body>
+
+</html>
